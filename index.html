@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard Balauro | Cybersecurity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sofia&display=swap" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sofia&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .title-font {
+      font-family: 'Sofia', sans-serif;
+    }
+
+    .wave-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .waves {
+      width: 100%;
+      height: 300px;
+      margin-bottom: -10px;
+    }
+
+    .parallax > use {
+      animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }
+    .parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 50s; }
+    .parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 30s; }
+    .parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 18s; }
+    .parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 25s; }
+
+    @keyframes move-forever {
+      0%   { transform: translate3d(-90px, 0, 0); }
+      100% { transform: translate3d(85px, 0, 0); }
+    }
+
+    .project-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      letter-spacing: 0.05em;
+    }
+
+    .terminal {
+      background: #0d1117;
+      border-radius: 0.75rem;
+      padding: 1.2rem 1.5rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-emerald-500 via-blue-600 via-indigo-600 to-violet-600 text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-black/30 backdrop-blur-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="https://commitdot.github.io" class="text-2xl font-bold tracking-tight">Ree</a>
+
+      <div class="flex items-center gap-8 text-sm font-medium">
+        <a href="https://commitdot.github.io" class="hover:text-emerald-300 transition-colors">← Design Portfolio</a>
+        <a href="https://github.com/commitdot" target="_blank" class="hover:text-emerald-300 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/richardprietobalauro/" target="_blank" class="hover:text-emerald-300 transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="pt-28 pb-12 px-6 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span class="badge bg-emerald-400/20 text-emerald-200 border border-emerald-400/40">🔵 Blue Team</span>
+          <span class="badge bg-violet-400/20 text-violet-200 border border-violet-400/40">🤖 AI Security</span>
+          <span class="badge bg-orange-400/20 text-orange-200 border border-orange-400/40">📋 MITRE ATT&CK</span>
+        </div>
+        <h1 class="title-font text-6xl md:text-7xl font-bold leading-none">
+          🛡️ Cybersecurity
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 max-w-lg">
+          Building blue team tools, AI-powered threat detection, and detection engineering projects for entry-level security roles.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-300">3</div>
+            <div class="text-sm text-white/70">Projects</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-300">107</div>
+            <div class="text-sm text-white/70">Tests</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-300">8</div>
+            <div class="text-sm text-white/70">MITRE Techniques</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-300">3</div>
+            <div class="text-sm text-white/70">SIEM Backends</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal preview -->
+      <div class="flex justify-center md:justify-end">
+        <div class="terminal w-full max-w-md shadow-2xl">
+          <div class="flex gap-2 mb-3">
+            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+          </div>
+          <div><span class="text-emerald-400">$ </span><span class="text-white">curl -X POST /predict \</span></div>
+          <div><span class="text-white/50">&nbsp;&nbsp;-d '{"text": "Verify your account now"}'</span></div>
+          <br>
+          <div><span class="text-white/50">{</span></div>
+          <div><span class="text-white/50">&nbsp;&nbsp;"label": </span><span class="text-red-400">"phishing"</span><span class="text-white/50">,</span></div>
+          <div><span class="text-white/50">&nbsp;&nbsp;"confidence": </span><span class="text-emerald-400">0.94</span><span class="text-white/50">,</span></div>
+          <div><span class="text-white/50">&nbsp;&nbsp;"risk_score": </span><span class="text-orange-400">94</span></div>
+          <div><span class="text-white/50">}</span></div>
+          <br>
+          <div><span class="text-emerald-400">$ </span><span class="text-white">python detect_anomalies.py</span></div>
+          <div><span class="text-red-400">🚨 [HIGH] 185.220.101.47</span></div>
+          <div><span class="text-white/50">&nbsp;&nbsp;→ Brute force: 80 failures (99%)</span></div>
+          <div><span class="text-white/50">&nbsp;&nbsp;→ MITRE T1110.001</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Waves -->
+  <div class="wave-container">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Projects -->
+  <div class="bg-white text-gray-900 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Security Projects</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Log Anomaly Detection -->
+        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+          <div class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center p-6">
+            <div class="font-mono text-xs text-left w-full">
+              <div class="text-red-400 font-bold mb-1">🚨 [HIGH] 185.220.101.47</div>
+              <div class="text-slate-400">anomaly_score: -0.1823</div>
+              <div class="text-slate-400">failure_rate: 0.99</div>
+              <div class="text-emerald-400 mt-1">T1110.001 - Brute Force</div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex gap-2 mb-3 flex-wrap">
+              <span class="badge bg-blue-100 text-blue-700">Python</span>
+              <span class="badge bg-purple-100 text-purple-700">Isolation Forest</span>
+              <span class="badge bg-gray-100 text-gray-600">pandas</span>
+            </div>
+            <h3 class="font-semibold text-xl mb-3">Log Anomaly Detection</h3>
+            <p class="text-gray-600 mb-6">ML-powered SSH auth log analyzer. Detects brute force, credential spraying, and off-hours access with explainable alerts and MITRE ATT&CK mapping.</p>
+            <div class="flex gap-3">
+              <a href="https://github.com/commitdot/log-anomaly-detection" target="_blank"
+                 class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium px-6 py-3 rounded-2xl transition-colors text-sm">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phishing Classifier -->
+        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+          <div class="h-48 bg-gradient-to-br from-indigo-800 to-indigo-900 flex items-center justify-center p-6">
+            <div class="font-mono text-xs text-left w-full">
+              <div class="text-indigo-300 mb-1">POST /predict</div>
+              <div class="text-slate-400">text: "Click to verify now"</div>
+              <div class="text-slate-500 mt-2">→ response:</div>
+              <div class="text-red-400">&nbsp;&nbsp;label: "phishing"</div>
+              <div class="text-emerald-400">&nbsp;&nbsp;confidence: 0.94</div>
+              <div class="text-orange-400">&nbsp;&nbsp;risk_score: 94</div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex gap-2 mb-3 flex-wrap">
+              <span class="badge bg-green-100 text-green-700">Flask</span>
+              <span class="badge bg-yellow-100 text-yellow-700">TF-IDF</span>
+              <span class="badge bg-pink-100 text-pink-700">NLP</span>
+              <span class="badge bg-gray-100 text-gray-600">Vercel</span>
+            </div>
+            <h3 class="font-semibold text-xl mb-3">Phishing Email Classifier</h3>
+            <p class="text-gray-600 mb-6">NLP-based REST API classifying emails as phishing or legitimate. TF-IDF + Logistic Regression, ~92% accuracy, deployable to Vercel in one command.</p>
+            <div class="flex gap-3 flex-wrap">
+              <a href="https://github.com/commitdot/phishing-classifier" target="_blank"
+                 class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium px-6 py-3 rounded-2xl transition-colors text-sm">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sigma Detection Rules -->
+        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+          <div class="h-48 bg-gradient-to-br from-orange-800 to-red-900 flex items-center justify-center p-6">
+            <div class="font-mono text-xs text-left w-full">
+              <div class="text-orange-300 mb-1">ssh_brute_force.yml</div>
+              <div class="text-slate-400">status: stable</div>
+              <div class="text-slate-400">level: high</div>
+              <div class="text-emerald-400">tags:</div>
+              <div class="text-slate-400">&nbsp;&nbsp;- attack.t1110.001</div>
+              <div class="text-emerald-400 mt-1">→ Compiles to Splunk SPL ✓</div>
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex gap-2 mb-3 flex-wrap">
+              <span class="badge bg-orange-100 text-orange-700">Sigma</span>
+              <span class="badge bg-blue-100 text-blue-700">Splunk</span>
+              <span class="badge bg-teal-100 text-teal-700">Elastic</span>
+              <span class="badge bg-red-100 text-red-700">MITRE</span>
+            </div>
+            <h3 class="font-semibold text-xl mb-3">Sigma Detection Rules</h3>
+            <p class="text-gray-600 mb-6">SIEM-agnostic detection rules mapped to MITRE ATT&CK. Compiles to Splunk SPL, Elastic KQL, and QRadar AQL. 35 YAML validation tests.</p>
+            <a href="https://github.com/commitdot/sigma-rules" target="_blank"
+               class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-medium px-6 py-3 rounded-2xl transition-colors text-sm">
+              View on GitHub →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills wave separator back to gradient -->
+  <div class="wave-container bg-white">
+    <svg style="transform:scaleY(-1)" class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave2" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave2" x="48" y="0" fill="rgba(99,102,241,0.15)" />
+        <use xlink:href="#gentle-wave2" x="48" y="3" fill="rgba(99,102,241,0.25)" />
+        <use xlink:href="#gentle-wave2" x="48" y="5" fill="rgba(99,102,241,0.4)" />
+        <use xlink:href="#gentle-wave2" x="48" y="7" fill="rgba(79,70,229,0.85)" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Skills -->
+  <div class="py-20 px-6 max-w-7xl mx-auto text-center">
+    <h3 class="text-4xl font-bold mb-10">Skills &amp; Tools</h3>
+    <div class="flex flex-wrap justify-center gap-x-10 gap-y-4 text-lg">
+      <span class="hover:text-emerald-300 transition-colors">Splunk · Elastic SIEM · Wazuh · QRadar</span>
+      <span class="hover:text-emerald-300 transition-colors">Python · Flask · pandas · scikit-learn</span>
+      <span class="hover:text-emerald-300 transition-colors">MITRE ATT&amp;CK · Sigma · NIST CSF 2.0</span>
+      <span class="hover:text-emerald-300 transition-colors">Isolation Forest · TF-IDF · NLP</span>
+      <a href="https://github.com/commitdot" target="_blank" class="hover:text-emerald-300 transition-colors">GitHub Actions · pytest (107 tests)</a>
+    </div>
+  </div>
+
+  <footer class="bg-black/80 py-12 text-center text-white/70">
+    <p>© Richard Balauro •
+      <a href="https://commitdot.github.io" class="hover:text-emerald-300 transition-colors">Design Portfolio</a>
+      · <a href="https://github.com/commitdot" target="_blank" class="hover:text-emerald-300 transition-colors">GitHub</a>
+      · Built with Tailwind + Waves
+    </p>
+  </footer>
+
+</body>
+</html>
